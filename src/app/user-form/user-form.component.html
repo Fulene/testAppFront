@@ -1,0 +1,38 @@
+<form [formGroup]="form" (ngSubmit)="saveUser()">
+  <div>
+    <label for="firstname">FirstName</label>
+    <div>
+      <input type="text" id="firstname" formControlName="firstname" />
+    </div>
+  </div>
+
+  <div>
+    <label for="name">Name</label>
+    <div>
+      <input type="text" id="name" formControlName="name" />
+    </div>
+  </div>
+
+  <div>
+    <label for="birthday">Birthday</label>
+    <div>
+      <input type="date" id="birthday" formControlName="birthday" />
+    </div>
+  </div>
+
+  <div>
+    <label for="age">Age</label>
+    <div>
+      <input type="number" id="age" formControlName="age" />
+    </div>
+  </div>
+
+  <div>
+    <button type="submit">Save</button>
+  </div>
+</form>
+
+<div>
+  <button type="submit">User list</button>
+  <span *ngFor="let u of users._embedded.users"></span>
+</div>
